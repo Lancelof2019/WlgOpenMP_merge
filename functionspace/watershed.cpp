@@ -47,22 +47,7 @@ struct cmp2{
     }
 
 };
-/*
-void vistNode(vector<nngNode>&nngvec,priority_queue<nngNode,vector<nngNode>,cmp2> &nngprioq){
-             for(int i=0;i<nngvec.size();i++){
-                   if(nngvec.at(i).x==nngprioq.top().x){
-                      cout<<"------------------In vector-------------------------"<<endl;
-	              cout<<"distanceValue:"<<nngprioq.top().ndist<<endl;
-                      cout<<"x:"<<nngprioq.top().x<<endl;
-                      cout<<"y:"<<nngprioq.top().y<<endl;
-                      cout<<"sumPixel:"<<nngprioq.top().pixelval<<endl;
-                      cout<<"numPixel:"<<nngprioq.top().pixelnum<<endl;
-                      nngprioq.pop();
-		   }
-	     }
 
-}
-*/
 
 Mat WatershedAlg::watershed(Array2D<int> &image, Array2D<int>& markers,Mat &duplImage,int &rows,int &cols,Array2D<bool> &inprioq,Array2D<int>& markerMap,Array2D<int>&temp,Array2D<int>& nextSet, int &id_num){
 
@@ -174,13 +159,6 @@ for(int i=0;i<tempcounter;i++){
                             canLabel = false;
 			    duplImage.at<Vec3b>(CrtX,CrtY)=boundColor;
                             idArr(neighboursLabel-1,markerMap(nextX,nextY)-1)=1;
-			    //idSum++;
-
-
-                   //         Vec3b vecColor;
-                     //       vecColor[0] = rand()%255+0;
-                       //     vecColor[1] = rand()%255+1;
-                         //   vecColor[2] = rand()%255+2;
 
                         }
                     }
